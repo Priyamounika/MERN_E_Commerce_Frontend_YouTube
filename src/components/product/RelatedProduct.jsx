@@ -42,7 +42,7 @@ const RelatedProduct = ({ category }) => {
                         width: "200px",
                         height: "200px",
                         borderRadius: "10px",
-                        border: "1px solid orange",
+                        border: "1px solid #d0a9f5",
                       }}
                     />
                   </Link>

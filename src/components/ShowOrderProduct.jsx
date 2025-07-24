@@ -20,7 +20,7 @@ const ShowOrderProduct = ({ items }) => {
 
   return (
     <>
-      <table className="table table-bordered border-gray-600 bg-white !text-black text-center">
+      <table className="table table-bordered border-gray-900 bg-white !text-black text-center">
         <thead>
           <tr>
             <th scope="col" className="bg-white !text-black text-light">

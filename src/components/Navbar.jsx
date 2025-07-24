@@ -141,7 +141,7 @@ const Navbar = () => {
             ) : (
               <>
                 <Link to="/login" className="btn btn-secondary w-full mb-2 !bg-white !text-black">Login</Link>
-                <Link to="/register" className="btn btn-info w-full">Register</Link>
+                <Link to="/register" className="btn btn-info w-full !bg-[#461971] !text-white !border-none">Register</Link>
               </>
             )}
           </div>

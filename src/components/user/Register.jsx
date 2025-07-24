@@ -32,13 +32,10 @@ const Register = () => {
   return (
     <>
       <div
-        className="container my-5 p-4"
-        style={{
-          width: "600px",
-          border: "2px solid yellow",
-          borderRadius: "10px",
-        }}
-      >
+  className="w-full max-w-xl mx-auto my-5 p-4 rounded-lg"
+  style={{ border: "1px solid #d0a9f5" }}
+>
+
         <h1 className="text-center">User Register</h1>
         <form onSubmit={submitHandler} className="my-3">
           <div className="mb-3">
@@ -83,7 +80,7 @@ const Register = () => {
             />
           </div>
           <div className="d-grid col-6 mx-auto my-3">
-            <button type="submit" className="btn btn-primary">
+            <button type="submit" className="btn btn-primary !bg-[#461971] !text-white !border-none">
               Register
             </button>
           </div>

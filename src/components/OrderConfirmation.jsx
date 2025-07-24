@@ -15,13 +15,13 @@ const OrderConfirmation = () => {
 
   return (
     <>
-      <div className="container my-3">
+      <div className="container my-3 ">
         <h1 className="text-center">Your order has been confirm,</h1>
         <h3 className="text-center">It will delivered soon</h3>
       </div>
 
-      <div className="container">
-        <table className="table table-bordered border-primary !bg-white !text-black">
+      <div className="container !overflow-x-scroll">
+        <table className="table table-bordered border-gray-900 !bg-white !text-black">
           <thead className="!bg-white !text-black">
             <tr>
               <th scope="col" className="!bg-white !text-black text-light text-center">
