@@ -38,13 +38,13 @@ const TableProduct = ({ cart }) => {
               Qty
             </th>
             <th scope="col" className="bg-dark text-light">
-              .Qty++
+              Qty++
             </th>
             <th scope="col" className="bg-dark text-light">
-              .Qty--
+              Qty--
             </th>
             <th scope="col" className="bg-dark text-light">
-              remove...
+              remove
             </th>
           </tr>
         </thead>

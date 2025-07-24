@@ -92,7 +92,7 @@ const Cart = () => {
                 style={{ fontWeight: "bold" }}
                 onClick={() => decreaseQty(product?.productId, 1)}
               >
-                Qty--
+                ..Qty--
               </button>
               <button
                 className="btn btn-info mx-3"
@@ -107,7 +107,7 @@ const Cart = () => {
                   )
                 }
               >
-                Qty++
+                ..Qty++
               </button>
               <button
                 className="btn btn-danger mx-3"
