@@ -48,10 +48,10 @@ const Navbar = () => {
             className="flex justify-center items-center gap-3 md:hidden cursor-pointer"
             onClick={() => setMenuOpen(!menuOpen)}
           >
-            <Link to="/cart" className="relative btn btn-primary">
+            <Link to="/cart" className="relative btn btn-primary !bg-orange-400 !border-none">
                   <span className="material-symbols-outlined">shopping_cart</span>
                   {cart?.items?.length > 0 && (
-                    <span className="absolute top-0 right-0 bg-red-500 text-xs px-1 rounded-full">
+                    <span className="absolute -top-2 right-0 !bg-red-500 text-xs px-1 rounded-full">
                       {cart?.items?.length}
                     </span>
                   )}
