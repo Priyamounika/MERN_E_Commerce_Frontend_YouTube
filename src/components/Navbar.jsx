@@ -14,7 +14,7 @@ const Navbar = () => {
   const filterbyCategory = (cat) => {
     setFilteredData(
       products.filter(
-        (data) => data.category.toLowerCase() === cat.toLowerCase()
+        (data) => data.category?.toLowerCase() === cat?.toLowerCase()
       )
     );
   };
@@ -150,7 +150,7 @@ const Navbar = () => {
         {/* Filter bar (only on homepage) */}
         {location.pathname === "/" && (
           <div className="sub_bar overflow-x-auto shadow-lg bg-white text-black flex space-x-4 text-sm">
-            <div className="items cursor-pointer !text-gray-600" onClick={() => setFilteredData(products)}>No Filter</div>
+            <div className="items cursor-pointer !text-gray-400" onClick={() => setFilteredData(products)}>No Filter</div>
             <div className="items cursor-pointer" onClick={() => filterbyCategory("mobiles")}>Mobiles</div>
             <div className="items cursor-pointer" onClick={() => filterbyCategory("laptops")}>Laptops</div>
             <div className="items cursor-pointer" onClick={() => filterbyCategory("cameras")}>Cameras</div>
