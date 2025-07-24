@@ -43,16 +43,16 @@ const Cart = () => {
         <>
           <div className="my-5 text-center">
             <button
-              className="btn btn-info mx-3"
+              className="btn btn-info mx-3 !bg-white !border-violet-200 shadow-sm"
               style={{ fontWeight: "bold", fontSize: "1.2rem" }}
             >
-              Total Qty :- {qty}
+              <span className="!font-medium !text-gray-800 !text-[18px]">Total Qty:</span> {qty}
             </button>
             <button
-              className="btn btn-warning mx-3"
+              className="btn btn-warning mx-3 !bg-white !border-violet-200 shadow-sm"
               style={{ fontWeight: "bold", fontSize: "1.2rem" }}
             >
-              Total Price :- {price}
+                <span className="!font-medium !text-gray-800 !text-[18px]">Total Price:</span> {price}
             </button>
           </div>
         </>
@@ -61,7 +61,7 @@ const Cart = () => {
       {cart?.items?.map((product) => (
         <div
           key={product._id}
-          className="container p-3 bg-dark my-5 text-center"
+          className="container p-3 bg-white border rounded-lg my-5 text-center"
         >
           <div
             style={{
@@ -81,22 +81,25 @@ const Cart = () => {
                 }}
               />
             </div>
-            <div className="cart_des">
-              <h2>{product.title}</h2>
-              <h4>{product.price}</h4>
-              <h4>Qty :- {product.qty}</h4>
+            <div className="cart_des !text-black">
+              <h2 className="!text-[22px] md:!w-[] lg:!w-80">{product.title}</h2>
+              <div>
+              <h4 className="!text-[17px]"><span className="text-gray-500">Price: </span>{product.price}</h4>
+              <h4 className="!text-[17px]"><span className="text-gray-500">Quantity: </span>{product.qty}</h4>
             </div>
+            </div>
+            
             <div className="cart_action">
               <button
-                className="btn btn-warning mx-3"
+                className="btn btn-warning mx-3 !border-gray-400 !p-0 !py-1 !px-[15px] !bg-white"
                 style={{ fontWeight: "bold" }}
                 onClick={() => decreaseQty(product?.productId, 1)}
               >
-                ..Qty--
+                -
               </button>
               <button
-                className="btn btn-info mx-3"
-                style={{ fontWeight: "bold" }}
+                className="btn btn-info mx-3 !border-gray-400 !p-0 !py-1 !px-3 !bg-white"
+                style={{ fontWeight: "extrabold" }}
                 onClick={() =>
                   addToCart(
                     product?.productId,
@@ -107,7 +110,7 @@ const Cart = () => {
                   )
                 }
               >
-                ..Qty++
+                +
               </button>
               <button
                 className="btn btn-danger mx-3"
@@ -128,14 +131,14 @@ const Cart = () => {
       {cart?.items?.length > 0 && (
         <div className="container text-center my-3">
           <button
-            className="btn btn-warning mx-3"
+            className="btn btn-warning mx-3 !px-5 !border-none !text-[18px] !font-normal !text-white !bg-[#461971]"
             style={{ fontWeight: "bold" }}
             onClick={() => navigate("/shipping")}
           >
             Checkout
           </button>
           <button
-            className="btn btn-danger mx-3"
+            className="btn btn-danger mx-3 !px-5 !border-gray-400 !text-[18px] !font-normal !text-black !bg-white"
             style={{ fontWeight: "bold" }}
             onClick={() => {
               if (confirm("Are you sure, want clear cart ...?")) {

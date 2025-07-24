@@ -91,24 +91,24 @@ const Checkout = () => {
       <div className="container  my-3">
         <h1 className="text-center">Order Summary</h1>
 
-        <table className="table table-bordered border-primary bg-dark">
-          <thead className="bg-dark">
+        <table className="table table-bordered border-primary bg-pink-200">
+          <thead className="bg-white">
             <tr>
-              <th scope="col" className="bg-dark text-light text-center">
+              <th scope="col" className="bg-white !text-black text-light text-center">
                 Product Details
               </th>
 
-              <th scope="col" className="bg-dark text-light text-center">
+              <th scope="col" className="bg-white !text-black text-light text-center">
                 Shipping Address
               </th>
             </tr>
           </thead>
-          <tbody className="bg-dark">
+          <tbody className="bg-white !text-black">
             <tr>
-              <td className="bg-dark text-light">
+              <td className="bg-white !text-black text-light">
                 <TableProduct cart={cart} />
               </td>
-              <td className="bg-dark text-light">
+              <td className="bg-white !text-black text-light">
                 <ul style={{ fontWeight: "bold" }}>
                   <li>Name : {userAddress?.fullName}</li>
                   <li>Phone : {userAddress?.phoneNumber}</li>
@@ -125,11 +125,11 @@ const Checkout = () => {
       
       <div className="container text-center my-5">
         <button
-          className="btn btn-secondary btn-lg"
+          className="btn btn-secondary btn-lg !font-normal !uppercase !text-[16px] !px-5 !bg-[#461971]"
           style={{ fontWeight: "bold" }}
           onClick={handlePayment}
         >
-          Procced To Pay
+          Procceed To Pay
         </button>
       </div>
     </>

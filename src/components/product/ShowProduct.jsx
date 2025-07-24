@@ -15,7 +15,7 @@ const ShowProduct = () => {
             d-flex justify-content-center align-items-center"
             >
               <div
-                className="card bg-dark text-light text-center"
+                className="card bg-white !rounded-xl text-light shadow text-center"
                 style={{ width: "18rem" }}
               >
                 <Link
@@ -30,18 +30,18 @@ const ShowProduct = () => {
                       width: "200px",
                       height: "200px",
                       borderRadius: "10px",
-                      border: "2px solid yellow",
+                      border: "1px solid #d0a9f5",
                     }}
                   />
                 </Link>
                 <div className="card-body">
-                  <h5 className="card-title">{product.title}</h5>
+                  <h5 className="card-title !text-black">{product.title}</h5>
                   <div className="my-3">
-                    <button className="btn btn-primary mx-3">
+                    <button className="btn btn-primary mx-3 !text-[15px] !py-[6px] !px-2 !font-normal !border-gray-500 !border-[1px] !bg-white !text-black ">
                       {product.price} {"₹"}
                     </button>
                     <button
-                      className="btn btn-warning"
+                      className="btn btn-warning !text-white !uppercase !text-[14px] !py-[7px] !px-2 !font-normal !border-white !bg-[#461971]"
                       onClick={() =>
                         addToCart(
                           product._id,

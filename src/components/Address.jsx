@@ -56,17 +56,17 @@ const Address = () => {
   return (
     <>
       <div
-        className="container my-3 p-4"
+        className="!bg-white container my-4 p-4"
         style={{
-          border: "2px solid yellow",
+          border: "1px solid orange",
           borderRadius: "10px",
         }}
       >
-        <h1 className="text-center">Shipping Address</h1>
+        <h1 className="text-center">Shipping Address!</h1>
         <form onSubmit={submitHandler} className="my-3">
           <div className="row">
             <div className="mb-3 col-md-4 ">
-              <label htmlFor="exampleInputEmail1" className="form-label">
+              <label htmlFor="exampleInputEmail1" className="form-label bg-white">
                 Full Name
               </label>
               <input
@@ -74,7 +74,7 @@ const Address = () => {
                 value={formData.fullName}
                 onChange={onChangerHandler}
                 type="text"
-                className="form-control bg-dark text-light"
+                className="form-control text-black"
                 id="exampleInputEmail13"
                 aria-describedby="emailHelp"
               />
@@ -88,7 +88,7 @@ const Address = () => {
                 value={formData.country}
                 onChange={onChangerHandler}
                 type="text"
-                className="form-control bg-dark text-light"
+                className="form-control bg-white text-black"
                 id="exampleInputEmail1"
                 aria-describedby="emailHelp"
               />
@@ -102,7 +102,7 @@ const Address = () => {
                 value={formData.state}
                 onChange={onChangerHandler}
                 type="text"
-                className="form-control bg-dark text-light"
+                className="form-control bg-white text-black"
                 id="exampleInputPassword1"
               />
             </div>
@@ -118,7 +118,7 @@ const Address = () => {
                 value={formData.city}
                 onChange={onChangerHandler}
                 type="text"
-                className="form-control bg-dark text-light"
+                className="form-control bg-white text-black"
                 id="exampleInputEmail13"
                 aria-describedby="emailHelp"
               />
@@ -132,7 +132,7 @@ const Address = () => {
                 value={formData.pincode}
                 onChange={onChangerHandler}
                 type="number"
-                className="form-control bg-dark text-light"
+                className="form-control bg-white text-black"
                 id="exampleInputEmail1"
                 aria-describedby="emailHelp"
               />
@@ -146,7 +146,7 @@ const Address = () => {
                 value={formData.phoneNumber}
                 onChange={onChangerHandler}
                 type="number"
-                className="form-control bg-dark text-light"
+                className="form-control bg-white text-black"
                 id="exampleInputPassword1"
               />
             </div>
@@ -162,14 +162,14 @@ const Address = () => {
                 value={formData.address}
                 onChange={onChangerHandler}
                 type="text"
-                className="form-control bg-dark text-light"
+                className="form-control bg-white text-black"
                 id="exampleInputPassword1"
               />
             </div>
           </div>
 
           <div className="d-grid col-6 mx-auto my-3">
-            <button type="submit" className="btn btn-primary" 
+            <button type="submit" className="btn btn-primary !text-black !border-gray-400 !bg-white" 
             style={{fontWeight:'bold'}}>
               Submit
             </button>
@@ -177,7 +177,7 @@ const Address = () => {
         </form>
         {userAddress && (
           <div className="d-grid col-6 mx-auto my-3">
-            <button className="btn btn-warning"
+            <button className="btn btn-warning !border-white !text-white !bg-[#461971]"
             onClick={()=>navigate('/checkout')}
             style={{fontWeight:'bold'}}
             >Use Old Address</button>
